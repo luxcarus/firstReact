@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class BasicInput extends Component {
+export default class BasicInput extends Component {
 
 	constructor(){
 		super();
@@ -12,4 +12,3 @@ class BasicInput extends Component {
     );
   }
 }
-export default BasicInput;

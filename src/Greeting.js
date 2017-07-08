@@ -17,6 +17,10 @@ class Greeting extends Component {
     this.setState({name: event.target.value});
   }
 
+  tellUrName () {
+    console.log('luxlee')
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +30,7 @@ class Greeting extends Component {
           <input type="text" value={this.state.value} onChange={this.handleChange} />
         </div>
         <div>
-          <BasicButton></BasicButton>
+          <BasicButton onClick={this.tellUrName}></BasicButton>
         </div>
       </div>
     );

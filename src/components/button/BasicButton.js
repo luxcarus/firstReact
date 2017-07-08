@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class BasicButton extends Component {
+export default class BasicButton extends Component {
   render() {
+    console.log(this.props)
     return (
-      <button>BasicButton</button>
+      <button onClick={this.props.onClick}>BasicButton</button>
     );
   }
 }
-export default BasicButton;
