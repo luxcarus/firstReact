@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class BasicInput extends Component {
+export default class BasicInput extends React.Component {
 
 	constructor(){
 		super();
@@ -8,7 +8,7 @@ export default class BasicInput extends Component {
 
   render() {
     return (
-      <input type="text" value={this.state.value} onChange={this.handleChange} />
+      <input type="text" onChange={this.handleChange} />
     );
   }
 }

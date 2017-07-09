@@ -1,0 +1,23 @@
+#1
+npm install -g create-react-app
+create-react-app my-app
+
+cd my-app
+npm start
+
+#2
+npm install --save prop-types
+
+#3
+npm install --save purecss
+
+#4
+npm install -g webpack
+or
+npm install --save-dev webpack
+
+#5
+npm install style-loader css-loader --save-dev
+
+#6
+npm install --save redux react-redux

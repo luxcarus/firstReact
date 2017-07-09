@@ -12,7 +12,7 @@ export default class BasicBody extends React.Component {
   }
 }
 
-BasicBody.propTypes = {
-    title: PropTypes.string,
-    body: PropTypes.string.isRequired
-};
+// BasicBody.propTypes = {
+    // title: PropTypes.string,
+    // body: PropTypes.string.isRequired
+// };
