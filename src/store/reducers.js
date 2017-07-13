@@ -6,7 +6,6 @@ const initialStarList = {
 }
 
 const lister = (state = initialStarList, action) => {
-  console.log(action);
   switch (action.type) {
     case SET_STAR_LIST:
       return Object.assign({},state,{

@@ -2,46 +2,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <div className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h2>Welcome to React</h2>
-//         </div>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
-
-// import React, { Component } from 'react';
-// import Greeting from './Greeting';
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <div>title</div>
-//         <Greeting></Greeting>
-//       </div>
-//     );
-//   }
-// }
-
-
-
 import React from 'react';
-// import Header from './components/header/BasicHeader';
-// import Content from './components/body/BasicBody';
-// import RandomNumber from './components/test/RandomNumber';
-
-// import SignIn from './containers/SignIn';
 
 import BasicTable from './components/table/BasicTable'
 import ListButton from './components/button/ListButton'
@@ -67,15 +28,14 @@ export default class App extends React.Component {
     }
 
     getStars (that) {
-
+    
+        /*
         let http = new Http({
             async:true,
             method:'POST',
             url: 'http://localhost:12000/star/list',
             whenSuccess:function(result){
-                console.log(result.data[0]);
                 that.props.store.dispatch(setStarList(result.data));
-
             },
             whenError:function(result){
                 alert('no-err');
@@ -91,6 +51,29 @@ export default class App extends React.Component {
             that.id = 0 
         }
         http.send(param);
+        */
+
+
+        that.props.store.dispatch(setStarList([
+					{
+						no: 1,
+						name: 'Naver',
+						url: 'http://dic.naver.com',
+						date: '2017,02',
+						func: function() {
+							return alert('callback fr server1')
+						}
+					},
+					{
+						no: 2,
+						name: 'Daum',
+						url: 'http://daum.net',
+						date: '2017,03',
+						func: function() {
+							return alert('callback fr server2')
+						}
+					},
+				]));
 
     }
 
@@ -105,8 +88,6 @@ export default class App extends React.Component {
                 <Content title={ this.props.contentTitle } body={ this.props.contentBody }/>
                 <RandomNumber number={this.state.value} 
                               onUpdate={this.updateValue} > </RandomNumber>*/}
-
-                
                 {/*<SignIn></SignIn>*/}
 
                 <BasicTable store = {this.props.store}></BasicTable>
@@ -116,8 +97,3 @@ export default class App extends React.Component {
     }
 }
 
-App.defaultProps = {
-    headerTitle: 'Default header',
-    contentTitle: 'Default contentTitle',
-    contentBody: 'Default contentBody'
-};

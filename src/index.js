@@ -8,8 +8,7 @@ import { createStore } from 'redux';
 import { Provider  } from 'react-redux';
 import listApp from './store/reducers';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+import 'purecss'
 
 const store = createStore(listApp);
 

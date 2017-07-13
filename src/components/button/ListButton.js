@@ -13,11 +13,9 @@ export default class ListButton extends React.Component {
   }
 };
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         onSetStarList: () => dispatch(setStarList()),
-//         onGetStarList: () => dispatch(getStarList())
-//     }
-// }
-
-// ListButton = connect(undefined, mapDispatchToProps)(ListButton);
+let mapDispatchToProps = (dispatch) => {
+    return {
+        onSetStarList: () => dispatch(setStarList())
+    }
+}
+ListButton = connect(undefined, mapDispatchToProps)(ListButton);
