@@ -7,8 +7,8 @@ npm start
 
 #2
 npm install --save prop-types
-
 #3
+[CSS]
 npm install --save purecss
 
 #4

@@ -1,11 +1,7 @@
 import React from 'react'
-import {getStarList} from '../../store/actions'
+// import {getStarList} from '../../store/actions'
 
 export default class BasicTable extends React.Component {
-
-  constructor(props){
-    super(props)
-  }
 
   render(){
     return(
